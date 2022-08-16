@@ -1,0 +1,37 @@
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/market_db
+#    username: abbos_j
+#    password: abbos9113
+#  jpa:
+#    hibernate:
+#      ddl-auto: create-drop
+#
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgresQLDialect
+#        format_sql: true
+#  mail:
+#    host: smtp.gmail.com
+#    smtp.port: 465
+#    username: mymail@gmail.com
+#    password: password
+#
+#  spring:
+#    mail:
+#      properties:
+#        mail:
+#          smtp:
+#            auth: true
+#            connection-timeout: 500
+#            timeout: 500
+#            write-timeout: 500
+##            TLS & port 587
+#            starttls:
+#              enable: true
+#              required: true
+#            ssl:
+#              enable: true
+#      test-connection=true:
+#
