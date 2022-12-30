@@ -1,5 +1,6 @@
 package uz.abbos.market.exception;
 
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -28,5 +29,10 @@ public class ControllerExceptionHandle extends ResponseEntityExceptionHandler {
         }
         body.put("errors", errors);
         return new ResponseEntity<>(body, headers, status);
+    }
+
+    @ExceptionHandler
+    public ResponseEntity<?> exception(ProductException e){
+        return ResponseEntity.badRequest().body(e.getMessage());
     }
 }
